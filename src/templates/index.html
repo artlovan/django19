@@ -5,6 +5,15 @@
     <title>Home Page</title>
 </head>
 <body>
-    <p1>List from html</p1>
+    <h1>{{ title }}</h1>
+
+    {% for obj in  object_list %}
+
+        <a href="{{ obj.get_absolut_url }}" >Title: {{ obj.title }}</a><br/>
+        <p>Content: {{ obj.content }}<br/><p/>
+        <p>Time Created: {{ obj.timestamp }}<br/><p/>
+        <p>Time Updated: {{ obj.updated }}<br/><p/>
+
+    {% endfor %}
 </body>
 </html>

@@ -22,6 +22,6 @@ import posts.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include(posts.urls)),
+    url(r'^posts/', include(posts.urls, namespace='posts')),
 ]
 
